@@ -1,0 +1,14 @@
+--- # Seting up local server
+- hosts: appserver
+  user: deployer
+  connection: ssh
+  become: yes
+  gather_facts: yes
+  pre_tasks:
+  - name: Start time
+    raw: date > $HOME/time.log
+  roles:
+  - deploygo
+  post_tasks:
+  - name: End Time
+    raw: date >> $HOME/time.log    
