@@ -1,4 +1,4 @@
 - name: start docker
   command: service docker restart
 #- name: pull git repo
-#  git: repo=https://github.com/henryfernandes/godeploy.git dest=/home/deployer/godeploy
+#  git: repo=https://github.com/henryfernandes/godeploy2.git dest=/home/deployer/godeploy2

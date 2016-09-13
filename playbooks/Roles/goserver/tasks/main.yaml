@@ -1,7 +1,7 @@
 - name: ensure docker is running (and enable it at boot)
   service: name=docker state=started enabled=yes
 - name: Build image and with buildargs
-  shell: cd /home/deployer/godeploy/goapp && docker build -t goapp .
+  shell: cd /home/deployer/godeploy2/goapp && docker build -t goapp .
 - name: Deploy 1st Container for GoApp
   shell: docker run -itd --name app1 -p 8081:8484 goapp /bin/bash
 - name: Deploy 2nd Container for GoApp
